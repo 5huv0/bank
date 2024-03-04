@@ -29,6 +29,14 @@
   }
   
   .button:hover{
-    color:black;
     background: linear-gradient(to right,blue , lightblue );
+  }
+
+  .button a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .button a:hover{
+    color:black;
   }
