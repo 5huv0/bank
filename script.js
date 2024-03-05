@@ -8,6 +8,14 @@ function addToDeposite(){
 
    document.getElementById('deposite').innerHTML = balance; //00
 
+   if (balance > 9999999){
+    alert('You are Rich as Fuck!!!');
+   }
+
+   else if(balance < 100){
+    alert("You are Poor as Fuck!!!");
+   }
+
 }
 
 
@@ -19,5 +27,9 @@ function addToWithdraw(){
 
     document.getElementById('withdraw').innerHTML = balance; //00
     
+    if (balance < 0){
+        alert('Insufficient Balance!!');
+    }
+
 }
 
