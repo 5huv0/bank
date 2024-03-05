@@ -25,7 +25,7 @@ function addToWithdraw(){
 
     balance -= withdrawAmount;
 
-    document.getElementById('withdraw').innerHTML = balance; //00
+    document.getElementById('withdraw').innerHTML = withdrawAmount; //00
     
     if (balance < 0){
         alert('Insufficient Balance!!');
@@ -33,3 +33,17 @@ function addToWithdraw(){
 
 }
 
+
+// let mainBalance = 50000;
+// document.getElementById('balances').innerHTML = mainBalance;
+
+
+// const depositeAmounts = Number(document.getElementById('deposite-amount').value);
+
+
+// const withdrawAmounts = Number(document.getElementById('withdraw-amount').value);
+
+
+// const finalBalance = depositeAmounts - withdrawAmounts;
+
+// document.getElementById('balances').innerHTML += finalBalance;
