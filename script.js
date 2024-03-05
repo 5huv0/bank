@@ -1,15 +1,23 @@
+let balance = 0;
+
 //this function is for deposite button
 function addToDeposite(){
-    Number(document.getElementById('deposite-amount').value); // whatever I input
+    const depositeAmount = Number(document.getElementById('deposite-amount').value); // whatever I input
 
+    balance += depositeAmount;
 
-    Number(document.getElementById('deposite').innerHTML); // 00
+   document.getElementById('deposite').innerHTML = balance; //00
+
 }
 
 
 //this functioin is for withdraw button
 function addToWithdraw(){
-    Number(document.getElementById('withdraw-amount').value); // whatever I input
+    const withdrawAmount = Number(document.getElementById('withdraw-amount').value); // whatever I input
 
-    Number(document.getElementById('withdraw').innerHTML); // 00
+    balance -= withdrawAmount;
+
+    document.getElementById('withdraw').innerHTML = balance; //00
+    
 }
+
