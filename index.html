@@ -23,7 +23,7 @@
         <div class="card1">
           <div class="card-body">
             <h5 class="card-title">Deposite</h5>
-            <h6 class="card-subtitle mb-2 ">$00</h6>
+            <h6 class="card-subtitle mb-2 " id="deposite">$00</h6>
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@
         <div class="card2" >
           <div class="card-body">
             <h5 class="card-title">Withdraw</h5>
-            <h6 class="card-subtitle mb-2 ">$00</h6>
+            <h6 class="card-subtitle mb-2" id="withdraw">$00</h6>
           
           </div>
         </div>
@@ -39,7 +39,7 @@
       <div class="col">
         <div class="card3" >
           <div class="card-body">
-            <h5 class="card-title">Balance</h5>
+            <h5 class="card-title" id="balance">Balance</h5>
             <h6 class="card-subtitle mb-2 ">$00</h6>
           </div>
         </div>
@@ -52,8 +52,8 @@
       <div class="card4">
         <div class="card-body">
           <h5 class="card-title">Plz Deposite</h5>       
-          <input type="number" placeholder="$amouont" class="input"><br>
-          <button class="button">Deposite</button>
+          <input type="number" placeholder="$amouont" class="input" id="deposite-amount"><br>
+          <button class="button" onclick="addToDeposite()">Deposite</button>
         </div>
       </div>
     </div>
@@ -61,8 +61,8 @@
       <div class="card5">
         <div class="card-body">
           <h5 class="card-title">Plz Deposite</h5>
-          <input type="number" placeholder="$amouont" class="input"><br>
-          <button class="button">Withdraw</button>
+          <input type="number" placeholder="$amouont" class="input" id="withdraw-amount"><br>
+          <button class="button" onclick="addToWithdraw()">Withdraw</button>
         </div>
       </div>
     </div>
