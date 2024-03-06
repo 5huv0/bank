@@ -2,7 +2,7 @@ let balance = 0;
 
 //this function is for deposite button
 function addToDeposite(){
-    const depositeAmount = Number(document.getElementById('deposite-amount').value); // whatever I input
+    const depositeAmount = Number(document.getElementById('deposite-amount').value); // whatever I input in deposite
 
     balance += depositeAmount;
 
@@ -21,7 +21,7 @@ function addToDeposite(){
 
 //this functioin is for withdraw button
 function addToWithdraw(){
-    const withdrawAmount = Number(document.getElementById('withdraw-amount').value); // whatever I input
+    const withdrawAmount = Number(document.getElementById('withdraw-amount').value); // whatever I input in withdraw
 
     balance -= withdrawAmount;
 
@@ -34,16 +34,26 @@ function addToWithdraw(){
 }
 
 
-// let mainBalance = 50000;
-// document.getElementById('balances').innerHTML = mainBalance;
+function totalBalanceAdd(){
+    let depositeAmount = Number(document.getElementById('deposite-amount').value); // whatever I input in deposite
 
+    // let withdrawAmount = Number(document.getElementById('withdraw-amount').value); // whatever I input in withdraw
 
-// const depositeAmounts = Number(document.getElementById('deposite-amount').value);
+    const Balance = Number(document.getElementById('balances').innerHTML);
 
+    depositeAmount += Balance;
 
-// const withdrawAmounts = Number(document.getElementById('withdraw-amount').value);
+    document.getElementById('balances').innerHTML = depositeAmount;
+}
 
+function totalBalanceDraw(){
+    // let depositeAmount = Number(document.getElementById('deposite-amount').value); // whatever I input in deposite
 
-// const finalBalance = depositeAmounts - withdrawAmounts;
+    let withdrawAmount = Number(document.getElementById('withdraw-amount').value); // whatever I input in withdraw
 
-// document.getElementById('balances').innerHTML += finalBalance;
+    const Balance = Number(document.getElementById('balances').innerHTML);
+
+    withdrawAmount -= Balance;
+
+    document.getElementById('balances').innerHTML = Math.abs(withdrawAmount);
+}
