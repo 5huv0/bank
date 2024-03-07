@@ -23,14 +23,26 @@ function addToDeposite(){
 function addToWithdraw(){
     const withdrawAmount = Number(document.getElementById('withdraw-amount').value); // whatever I input in withdraw
 
-    balance -= withdrawAmount;
+    const depositeAmount = Number(document.getElementById('deposite-amount').value);
 
-    document.getElementById('withdraw').innerHTML = withdrawAmount; //00
+    if(withdrawAmount < depositeAmount){
+        balance -= withdrawAmount;
+
+        document.getElementById('withdraw').innerHTML = withdrawAmount; //00
     
-    if (balance < 0){
+       
+    
+    }
+   
+    if (withdrawAmount > depositeAmount){
         alert('Insufficient Balance!!');
+
+        document.getElementById('balances').innerHTML = NaN;
     }
 
+    else if (balance < 0){
+        alert('Insufficient Balance!!');
+    }
 }
 
 
